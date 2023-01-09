@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipcart</title>
+
+    <!-- Style In CSS For Flipkart Langing Page -->
+    <style>
+        #container {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: block;
+        }
+
+        body {
+            font-size: 14px;
+            background-color: #f1f3f6;
+            color: #212121;
+            line-height: 1.6;
+        }
+
+        .nav {
+            
+            background-color: #2874f0;
+            z-index: 0;
+        }
+
+        .non {
+            display: flex;
+            justify-content: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .icon {
+            margin: 2px;
+            padding-right: 20px;
+        }
+
+        .n_icon {
+            margin: 5px;
+        }
+
+        .icon_1{
+            height: 20px;
+            width: 80px;
+        }
+
+        .icon_2{
+            height: 10px;
+            width: 10px;
+        }
+
+        .icon a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #ffff;
+            font-style: italic;
+        }
+
+        .plus {
+            font-style: italic;
+            color: #ffe500;
+        }
+
+        .search_bar{
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .search {
+            padding: 0 16px;
+            border-radius: 2px 0 0 2px;
+            border: 0;
+            outline: 0 none;
+            font-size: 14px;
+            height: 36px;
+            width: 512px;
+            align-content: center;
+        }
+
+        .s_btn {
+            border: 1px solid #fff;
+            background-color: #ffff;
+            padding: 2px;
+            padding-left: 4px;
+            padding-top: 6px;
+        }
+
+        #login{
+            padding-top: 13px;
+            padding-left: 40px;
+            padding-bottom: 10px;
+            padding-right: 40px;
+        }
+
+        .login {
+            color: #2874f0;
+            font-weight: 500;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 2px;
+            height: 32px;
+            padding: 5px 40px;
+            border: 1px solid #dbdbdb;
+        }
+
+        .more {
+            padding-top: 7px;
+        }
+
+        .dropdown {
+            /* float: left; */
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            /* outline: none; */
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            /* float: none; */
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(241, 241, 241);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #cart {
+            padding-top: 17px;
+            padding-left: 40px;
+        }
+
+        .cart {
+            font-size: 16px;
+            color: #ffff;
+            text-decoration: none;
+        }
+
+        .item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .item_bar{
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+            background-color: #ffff;
+        }
+
+        .item img {
+            width: 64px;
+            height: 64px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            margin-left: 35px;
+            margin-right: 35px;
+
+        }
+
+        .item a {
+            text-decoration: none;
+            /* text-align: center; */
+            color: black;
+        }
+
+        .poster_bar {
+            height: 362px;
+            margin-top: 15px;
+            margin-left: 250px;
+            margin-right: 250px;
+            background-color: #fff;
+            display:flex ;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+
+        .viewall {
+            margin-top: 132px;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .poster {
+            width: 230px;
+            height: 100%;
+            background-image: url("https://rukminim1.flixcart.com/fk-p-flap/278/278/image/1e483f8045ec13a8.jpg?q=90");
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        .viewall button {
+            width: 80px;
+            height: 30px;
+            color: #fff;
+            border-width: 0px;
+            background-color: #2874f0;
+
+        }
+
+        .sub_item {
+            height: 100%;
+            width: calc(100% - 230px);
+            display: flex;
+            overflow: auto;
+         
+        } 
+        
+        .sub_item_s {
+            width: 232px;
+            height: 100%;
+            padding: 0px, 15px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .sub_item_s a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }         
+
+        .sub_item_s img {
+            max-width: 300px;
+            max-width: 300px;
+        }  
+
+        .item-name {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #212121;
+            font-family: sans-serif;
+        }
+
+        .item-price {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #388e3c;
+            font-family: sans-serif;
+
+        }
+
+        .item-category {
+            opacity: 0.6;
+            margin-top: 10px;
+            font-weight: 300;
+            font-size: 12px;
+            color: #212121;
+            font-family: sans-serif;
+        }
+
+        .section5 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .des-item{
+            height: 50px;
+            margin-left: 250px;
+            margin-right: 250px;
+            display: flex;
+            background-color: #fff;
+            padding-top: 8px;
+            padding-left: 15px;
+        }
+
+        .des{
+            font-size: 23px;
+            font-family: sans-serif;
+        }
+
+        #demo {
+            padding-top: 5px;
+            font-size: 18px;
+            opacity: 0.6;
+
+        }
+
+        .des-btn {
+            padding-top: 4px;
+            padding-left: 1000px;
+        }
+
+        .des-item .des-btn button{
+            width: 80px;
+            height: 30px;
+            color: #fff;
+            border-width: 0px;
+            background-color: #2874f0;
+            align-items: center;
+        }
+
+        .time img{
+            height: 20px;
+            width: 20px;
+            margin-top: 8px;
+        }
+
+        .poster_bar5 {
+            height: 362px;
+            margin-top: 2px;
+            margin-left: 250px;
+            margin-right: 250px;
+            background-color: #fff;
+            display:flex ;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+
+        .sub_item5 {
+            height: 100%;
+            /* width: calc(100% - 230px); */
+            display: flex;
+            overflow: auto;
+         
+        } 
+        
+        .sub_item_s5 {
+            width: 232px;
+            height: 100%;
+            padding: 0px, 15px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sub_item_s5 a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }         
+
+        .sub_item_s5 img {
+            max-width: 300px;
+            max-width: 300px;
+        }
+    </style>
+    <!-- End CSS -->
+
+</head>
+<body>
+    <!-- main container start -->
+    <div id="container">
+        <div>
+            <!-- Nav bar start  -->
+            <div class="nav" id="nav">
+                <div class="non">
+                    <div class="n_icon">
+                        <div class="icon" id="icon">
+                                <a href=""><img class="icon_1" src="img/icon.png"></a><br>
+                                <a  class="" href="">Explore <span class="plus">Plus</span><img class="icon_2" src="../img/icon2.png">
+                                </a>
+                        </div>
+                    </div>
+                    <div  id="search_bar">
+                        <form class="search_bar" action="" method="get">
+                                <input class="search" type="text" placeholder="Search for products, brands and more" name="search" id="search">
+                                <button class="s_btn" type="submit" name="s_btn" id="s_btn"> <svg width="20" height="20"><g fill="#2874F1">
+                                    <path d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path>
+                                    <path d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg> </button>
+                        </form>
+                    </div>
+                    <div  id="login">
+                        <a href="#">
+                            <button class="login" type="button"><b> Login </b></button>
+                        </a>
+                    </div>
+                    <div class="more" id="more">
+                          
+                        <div class="dropdown">
+                            <button class="dropbtn"> More
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div> 
+        
+                    </div>
+                    <div  id="cart">
+                        <a class="cart" href="#"><svg class="" width="14" height="14" viewBox="0 0 16 16" ><path class="" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#ffff"></path></svg><span> Cart</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- nav bar end  -->
+
+
+            <!-- Icon Of Capecity start  -->
+            <div class="item_row">
+                <div class="item_bar">
+                    <div class="item">
+                        <a href=""><img src="img/i1.png" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Grocery</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i2.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Mobiles</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i3.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Fashion</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i4.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp;  Electronics</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i5.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Home</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i6.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Appliances</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i7.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Travel</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i8.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Top Offers</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i9.webp" alt=""> <br> Beauty, Toys & More</a>
+                    </div>
+                    <div class="item">
+                        <a href=""><img src="img/i10.webp" alt=""> <br>&nbsp; &nbsp; &nbsp; &nbsp;  Two Wheelers</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Icon of category end  -->
+
+        <!-- 1 section of offers start -->
+        <section class="section4">
+            <div class="poster_bar">                
+                <div class="sub_item">
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/l432ikw0/headphone/n/g/n/-original-imagf2yzeffezg4g.jpeg?q=70" alt="">
+                            <div class="item-name"> <b>Gaming TWS</b></div>
+                            <div class="item-price">From ₹899</div>
+                            <div class="item-category">Shop Now</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/power-bank/c/8/i/-original-imaggvt4dpp43pfk.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Ambrane Powerbanks</b></div>
+                            <div class="item-price">From ₹699</div>
+                            <div class="item-category">Fast Charging | High Capacity</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kit6hzk0-0/tracing-wheel/l/i/d/tx-rw-leather-edition-official-xbox-one-licensed-thrustmaster-original-imafygqym3zmf8j3.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Motion Controllers</b></div>
+                            <div class="item-price">Up to 50% Off</div>
+                            <div class="item-category">Shop Now</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/sticker/f/r/d/-original-imaggjj6h52skhsz.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Top Selling Stickers&Wallpapers</b></div>
+                            <div class="item-price">Starting From ₹69/</div>
+                            <div class="item-category">Flipkart SmartBuy</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kpwybgw0/screen-guard/edge-to-edge-tempered-glass/j/h/x/va-ftg-mi-note10-s-08-valight-original-imag4fknygmmj5ma.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Screen Guards</b></div>
+                            <div class="item-price">From ₹99</div>
+                            <div class="item-category">For All Top Models</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k0h12fk0/induction-cook-top/b/u/y/flipkart-smartbuy-1800acfksk174b-1800acskb-original-imafk9afdtmtkc6n.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Induction Cooktop</b></div>
+                            <div class="item-price">Up to 65% Off</div>
+                            <div class="item-category">Bajaj, Usha & more</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k0r15e80/pressure-cooker/a/7/w/12735-pigeon-original-imafkhfucz9hhyf5.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Pressure Cookers</b></div>
+                            <div class="item-price">From ₹549</div>
+                            <div class="item-category">Pigeon & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kebpqq80/diary-notebook/r/z/r/classmate-02105010-original-imafvfcheknzyq47.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Notebooks</b></div>
+                            <div class="item-price">From ₹99</div>
+                            <div class="item-category">Explore Now!</div>
+                        </a>      
+                    </div>
+
+                    
+                </div>
+
+                <div class="poster">
+                    <div class="viewall">
+                        <strong>Top Offers</strong>
+                        <button>VIEW ALL</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- 1 section of offers end  -->
+
+
+        <section class="section5">
+            <div class="des-item">
+                <div class="des">Deals of the Day</div>
+                <div class="time">&nbsp;&nbsp;<img src="https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/personal-banking/loans/fintech/baroda-overdraft-for-e-commerce/benifits/baroda-overdraft-for-e-commerce-reducedtat.svg" alt="">&nbsp;&nbsp;</div>
+                <p id="demo"></p>
+                <div class="des-btn"><button>VIEW ALL</button></div>
+                
+            </div>
+            <div class="poster_bar5">
+                <div class="sub_item5">
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/l432ikw0/headphone/n/g/n/-original-imagf2yzeffezg4g.jpeg?q=70" alt="">
+                            <div class="item-name"> <b>Gaming TWS</b></div>
+                            <div class="item-price">From ₹899</div>
+                            <div class="item-category">Shop Now</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/power-bank/c/8/i/-original-imaggvt4dpp43pfk.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Ambrane Powerbanks</b></div>
+                            <div class="item-price">From ₹699</div>
+                            <div class="item-category">Fast Charging | High Capacity</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kit6hzk0-0/tracing-wheel/l/i/d/tx-rw-leather-edition-official-xbox-one-licensed-thrustmaster-original-imafygqym3zmf8j3.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Motion Controllers</b></div>
+                            <div class="item-price">Up to 50% Off</div>
+                            <div class="item-category">Shop Now</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/sticker/f/r/d/-original-imaggjj6h52skhsz.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Top Selling Stickers&Wallpapers</b></div>
+                            <div class="item-price">Starting From ₹69/</div>
+                            <div class="item-category">Flipkart SmartBuy</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kpwybgw0/screen-guard/edge-to-edge-tempered-glass/j/h/x/va-ftg-mi-note10-s-08-valight-original-imag4fknygmmj5ma.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Screen Guards</b></div>
+                            <div class="item-price">From ₹99</div>
+                            <div class="item-category">For All Top Models</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k0h12fk0/induction-cook-top/b/u/y/flipkart-smartbuy-1800acfksk174b-1800acskb-original-imafk9afdtmtkc6n.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Induction Cooktop</b></div>
+                            <div class="item-price">Up to 65% Off</div>
+                            <div class="item-category">Bajaj, Usha & more</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k0r15e80/pressure-cooker/a/7/w/12735-pigeon-original-imafkhfucz9hhyf5.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Pressure Cookers</b></div>
+                            <div class="item-price">From ₹549</div>
+                            <div class="item-category">Pigeon & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kebpqq80/diary-notebook/r/z/r/classmate-02105010-original-imafvfcheknzyq47.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Notebooks</b></div>
+                            <div class="item-price">From ₹99</div>
+                            <div class="item-category">Explore Now!</div>
+                        </a>      
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </div>
+    <!-- main container end  -->
+   
+</body>
+<!-- JavaScript For Timer  -->
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+<!-- Timer js is end -->
+</html>
