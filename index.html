@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flipcart</title>
 
+    <!-- font font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- end font font-awesome -->
+
     <!-- Style In CSS For Flipkart Langing Page -->
     <style>
         #container {
@@ -211,6 +215,22 @@
         
         }
 
+        #left {
+            height: 85px;
+            width:30px;
+            border: #fff;
+            background-color: #fff;
+            box-shadow: 2px 1px 4px 1px rgba(0, 0, 0, 0.336);
+        }
+
+        #right {
+            height: 85px;
+            width:30px;
+            border: #fff;
+            background-color: #fff;
+            box-shadow: -2px 1px 4px 1px rgba(0, 0, 0, 0.336);
+        }
+
         .viewall {
             margin-top: 132px;
             width: 100%;
@@ -242,8 +262,11 @@
             width: calc(100% - 230px);
             display: flex;
             overflow: auto;
-         
         } 
+
+        .sub_item::-webkit-scrollbar{
+            width: 0;
+        }
         
         .sub_item_s {
             width: 232px;
@@ -255,7 +278,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            
+            scrollbar-width: none;
         }
 
         .sub_item_s a{
@@ -324,9 +347,16 @@
 
         }
 
+        .demo {
+            padding-top: 5px;
+            font-size: 18px;
+            opacity: 0.6;
+
+        }
+
         .des-btn {
             padding-top: 4px;
-            padding-left: 1000px;
+            padding-left: 950px;
         }
 
         .des-item .des-btn button{
@@ -363,6 +393,10 @@
             overflow: auto;
          
         } 
+
+        .sub_item5::-webkit-scrollbar{
+            width: 0;
+        }
         
         .sub_item_s5 {
             width: 232px;
@@ -423,7 +457,7 @@
                           
                         <div class="dropdown">
                             <button class="dropbtn"> More
-                              <i class="fa fa-caret-down"></i>
+                                <i class="fa-solid fa-angle-down"></i>
                             </button>
                             <div class="dropdown-content">
                               <a href="#">Link 1</a>
@@ -480,8 +514,14 @@
 
         <!-- 1 section of offers start -->
         <section class="section4">
-            <div class="poster_bar">                
-                <div class="sub_item">
+            
+            <div class="poster_bar">
+                
+                <div class="left-btn">
+                    <button id="left" onclick="scroll_r()"> <i class="fa-solid fa-chevron-left"></i> </button>
+                </div>
+                
+                <div class="sub_item" id="sub_item">
                     <div class="sub_item_s">
                         <a href="">
                             <img src="https://rukminim1.flixcart.com/image/200/200/l432ikw0/headphone/n/g/n/-original-imagf2yzeffezg4g.jpeg?q=70" alt="">
@@ -548,6 +588,10 @@
                     </div>
 
                     
+                </div>
+
+                <div class="right-btn">
+                    <button id="right" onclick="scroll_l()"> <i class="fa-solid fa-chevron-right"></i> </button>
                 </div>
 
                 <div class="poster">
@@ -566,79 +610,88 @@
             <div class="des-item">
                 <div class="des">Deals of the Day</div>
                 <div class="time">&nbsp;&nbsp;<img src="https://www.bankofbaroda.in/-/media/project/bob/countrywebsites/india/personal-banking/loans/fintech/baroda-overdraft-for-e-commerce/benifits/baroda-overdraft-for-e-commerce-reducedtat.svg" alt="">&nbsp;&nbsp;</div>
-                <p id="demo"></p>
+                <p id="demo"></p> &nbsp; &nbsp;<p class="demo">Left</p>
                 <div class="des-btn"><button>VIEW ALL</button></div>
                 
             </div>
             <div class="poster_bar5">
+
+                <div class="left-btn">
+                    <button id="left" onclick="scroll_r5()"> <i class="fa-solid fa-chevron-left"></i> </button>
+                </div>
+
                 <div class="sub_item5">
                     <div class="sub_item_s5">
                         <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/l432ikw0/headphone/n/g/n/-original-imagf2yzeffezg4g.jpeg?q=70" alt="">
-                            <div class="item-name"> <b>Gaming TWS</b></div>
-                            <div class="item-price">From ₹899</div>
-                            <div class="item-category">Shop Now</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/power-bank/c/8/i/-original-imaggvt4dpp43pfk.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Ambrane Powerbanks</b></div>
-                            <div class="item-price">From ₹699</div>
-                            <div class="item-category">Fast Charging | High Capacity</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/kit6hzk0-0/tracing-wheel/l/i/d/tx-rw-leather-edition-official-xbox-one-licensed-thrustmaster-original-imafygqym3zmf8j3.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Motion Controllers</b></div>
-                            <div class="item-price">Up to 50% Off</div>
-                            <div class="item-category">Shop Now</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/sticker/f/r/d/-original-imaggjj6h52skhsz.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Top Selling Stickers&Wallpapers</b></div>
-                            <div class="item-price">Starting From ₹69/</div>
-                            <div class="item-category">Flipkart SmartBuy</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/kpwybgw0/screen-guard/edge-to-edge-tempered-glass/j/h/x/va-ftg-mi-note10-s-08-valight-original-imag4fknygmmj5ma.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Screen Guards</b></div>
-                            <div class="item-price">From ₹99</div>
-                            <div class="item-category">For All Top Models</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/k0h12fk0/induction-cook-top/b/u/y/flipkart-smartbuy-1800acfksk174b-1800acskb-original-imafk9afdtmtkc6n.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Induction Cooktop</b></div>
-                            <div class="item-price">Up to 65% Off</div>
-                            <div class="item-category">Bajaj, Usha & more</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/k0r15e80/pressure-cooker/a/7/w/12735-pigeon-original-imafkhfucz9hhyf5.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Pressure Cookers</b></div>
-                            <div class="item-price">From ₹549</div>
-                            <div class="item-category">Pigeon & More</div>
-                        </a>
-                    </div>
-                    <div class="sub_item_s5">
-                        <a href="">
-                            <img src="https://rukminim1.flixcart.com/image/200/200/kebpqq80/diary-notebook/r/z/r/classmate-02105010-original-imafvfcheknzyq47.jpeg?q=70" alt="">
-                            <div class="item-name"><b>Notebooks</b></div>
-                            <div class="item-price">From ₹99</div>
+                            <img src="https://rukminim1.flixcart.com/image/200/200/krtjgcw0/headphone/d/9/g/au-mh501-maono-original-imag5j35rffkwpac.jpeg?q=70" alt="">
+                            <div class="item-name"> <b>Studio Headphones</b></div>
+                            <div class="item-price">Up to 80% off</div>
                             <div class="item-category">Explore Now!</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/jlph9jk0/cycle/h/f/k/skyper-26t-sskp26bk0001-16-hero-original-imaf8ru5xysfgtmx.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Premium Non-Geared Cycles</b></div>
+                            <div class="item-price">Up to 40% Off</div>
+                            <div class="item-category">Hercules, Hero & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kjom6q80-0/microphone-accessory/n/i/0/3-5mm-clip-microphone-for-youtube-collar-mic-for-voice-recording-original-imafz7ykspmdv3vw.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Microphones</b></div>
+                            <div class="item-price">Up to 70% off</div>
+                            <div class="item-category">Explore Now!</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k186fm80/bat/9/f/n/1000-1200-short-handle-endorsed-for-light-hard-tennis-ball-with-original-imafkuuyxrrphkbr.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Cricket</b></div>
+                            <div class="item-price">Up to 45% Off</div>
+                            <div class="item-category">CEAT, MRF & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/acoustic-guitar/e/y/y/dd-380c-blk-jixing-original-imaeff94e9tczafp.jpeg?q=70" alt="">
+                            <div class="item-name"><b>String Instruments</b></div>
+                            <div class="item-price">Up to 70% Off</div>
+                            <div class="item-category">Guitars, Ukuleles & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kkimfm80/tea/z/n/1/premium-pouch-regular-tea-powder-tata-original-imafzuf2mnubzphd.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Tea Powder</b></div>
+                            <div class="item-price">Upto 75% Off</div>
+                            <div class="item-category">Tata,Lipton & More</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kdbzqfk0/bar/8/h/q/push-up-bar-0-8-long-ankaro-original-imafu9dmvdk3rzvy.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Gym Essentials</b></div>
+                            <div class="item-price">From ₹139</div>
+                            <div class="item-category">Shop Now</div>
+                        </a>
+                    </div>
+                    <div class="sub_item_s5">
+                        <a href="">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kebpqq80/musical-keyboard/j/h/h/37-keys-nj-fashion-original-imafvyhrjeuah2ge.jpeg?q=70" alt="">
+                            <div class="item-name"><b>Musical Keyboards</b></div>
+                            <div class="item-price">up to 70% off</div>
+                            <div class="item-category">Beston, Redbox & more</div>
                         </a>      
                     </div>
 
-                    
                 </div>
+
+                <div class="right-btn">
+                    <button id="right" onclick="scroll_l5()"> <i class="fa-solid fa-chevron-right"></i> </button>
+                </div>
+
             </div>
         </section>
 
@@ -651,10 +704,34 @@
 <script>
 setInterval(myTimer, 1000);
 
+// for timer 
 function myTimer() {
   const d = new Date();
   document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 }
+// timer end 
+
+// for scroll bar 
+function scroll_l(){
+    var left = document.querySelector('.sub_item')
+    left.scrollBy(350,0)
+}
+
+function scroll_l5(){
+    var left = document.querySelector('.sub_item5')
+    left.scrollBy(350,0)
+}
+
+function scroll_r(){
+    var right = document.querySelector('.sub_item')
+    right.scrollBy(-350,0)
+}
+
+function scroll_r5(){
+    var right = document.querySelector('.sub_item5')
+    right.scrollBy(-350,0)
+}
+// scroll bar end 
 </script>
 <!-- Timer js is end -->
 </html>
