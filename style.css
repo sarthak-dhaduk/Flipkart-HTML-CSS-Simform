@@ -242,11 +242,10 @@ body {
 
 
 .poster_bar {
-    height: 362px;
+    height: 382px;
     margin-top: 15px;
     margin-left: 250px;
     margin-right: 250px;
-    background-color: #fff;
     display:flex ;
     justify-content: space-between;
     align-items: center;
@@ -282,10 +281,11 @@ body {
 
 .poster {
     width: 230px;
-    height: 100%;
+    height: 101%;
     background-image: url("https://rukminim1.flixcart.com/fk-p-flap/278/278/image/1e483f8045ec13a8.jpg?q=90");
     background-position: bottom;
     background-repeat: no-repeat;
+    background-color: #fff;
 }
 
 .viewall button {
@@ -299,7 +299,7 @@ body {
 
 .sub_item {
     height: 100%;
-    width: calc(100% - 230px);
+    width: calc(100% - 60px);
     display: flex;
     overflow: auto;
 } 
@@ -367,12 +367,13 @@ body {
 
 .des-item{
     height: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
+    /* margin-left: 250px;
+    margin-right: 250px; */
     display: flex;
     background-color: #fff;
     padding-top: 8px;
     padding-left: 15px;
+    margin-bottom: 5px;
 }
 
 .des{
@@ -396,7 +397,7 @@ body {
 
 .des-btn {
     padding-top: 4px;
-    padding-left: 950px;
+    padding-left: 720px;
 }
 
 .des-item .des-btn button{
@@ -464,7 +465,18 @@ body {
     max-width: 300px;
 }
 
-
+/* issue on section-4 */
+.s4-left {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    height: 100%;
+}
+.blo-title{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
 
 @media(max-width:1440px){
     .des-btn {
@@ -476,7 +488,6 @@ body {
         margin-top: 15px;
         margin-left: 85px;
         margin-right: 85px;
-        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -544,7 +555,6 @@ body {
         margin-top: 15px;
         margin-left: 50px;
         margin-right: 50px;
-        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -622,7 +632,6 @@ body {
         margin-top: 15px;
         margin-left: 15px;
         margin-right: 15px;
-        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -717,7 +726,6 @@ body {
         margin-top: 15px;
         margin-left: 5px;
         margin-right: 5px;
-        background-color: #fff;
         display: flex;
         align-items: center;
     }
@@ -742,6 +750,7 @@ body {
         background-image: url(https://rukminim1.flixcart.com/fk-p-flap/278/278/image/1e483f8045ec13a8.jpg?q=90);
         background-position: bottom;
         background-repeat: no-repeat;
+        background-color: #fff;
     }
     .poster_bar5 {
         height: 362px;
