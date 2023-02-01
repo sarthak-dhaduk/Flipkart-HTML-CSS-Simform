@@ -27,4 +27,4 @@ function scroll_r5(){
     var right = document.querySelector('.sub_item5')
     right.scrollBy(-350,0)
 }
-// scroll bar end 
+// scroll bar end
