@@ -1,4 +1,7 @@
 newlog/
 *log
 *.log
-.vscode/
+vscode/
+*.json
+*vscode/
+*.vscode/
