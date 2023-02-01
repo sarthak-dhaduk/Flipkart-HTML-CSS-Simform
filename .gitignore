@@ -1,0 +1,7 @@
+newlog/
+*log
+*.log
+vscode/
+*.json
+*vscode/
+*.vscode/
