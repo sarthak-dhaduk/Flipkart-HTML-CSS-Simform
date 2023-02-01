@@ -286,6 +286,7 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: #fff;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
 }
 
 .viewall button {
@@ -374,6 +375,7 @@ body {
     padding-top: 8px;
     padding-left: 15px;
     margin-bottom: 5px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
 }
 
 .des{
@@ -425,7 +427,7 @@ body {
     display:flex ;
     justify-content: space-between;
     align-items: center;
-
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
 }
 
 .sub_item5 {
@@ -476,8 +478,41 @@ body {
     display: flex;
     align-items: center;
     background-color: #fff;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
 }
 
+
+.title2{
+    display: flex;
+    margin-bottom: 2px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+.t2{
+    font-size: 23px;
+    font-family: sans-serif;
+}
+.st2{
+    opacity: 0.6;
+}
+.t2va{
+    width: 76px;
+    height: 28px;
+    color: #fff;
+    border-width: 0px;
+    background-color: #2874f0;
+    margin-top: 22px;
+    margin-left: 981px;
+}
 @media(max-width:1440px){
     .des-btn {
         padding-top: 4px;
@@ -510,6 +545,8 @@ body {
         background-color: #fff;
         padding-top: 8px;
         padding-left: 15px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
+
     }
 }
 @media(max-width:1024px){
@@ -581,6 +618,8 @@ body {
         background-color: #fff;
         padding-top: 8px;
         padding-left: 15px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
+
     }
 }
 @media(max-width:768px){
@@ -654,6 +693,7 @@ body {
         background-color: #fff;
         padding-top: 8px;
         padding-left: 15px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
     }
     .des-btn {
         padding-top: 4px;
@@ -770,6 +810,8 @@ body {
         background-color: #fff;
         padding-top: 8px;
         padding-left: 15px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
+
     }
     .des-btn {
         padding-top: 4px;
@@ -923,5 +965,6 @@ body {
         background-color: #fff;
         padding-top: 8px;
         padding-left: 15px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 2px 0px;
     }
 }
